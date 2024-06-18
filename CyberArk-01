@@ -10,6 +10,16 @@ What is cyberark digital vault ?
    It is a secure, hardened environment where privileged credentials, session recordings, and other sensitive information are stored.
    The Digital Vault uses multiple layers of security to protect this data, including encryption, access controls, and network isolation.
 
+Backend process of CyberArk Digital Vault :
+===========================================
+   User Request: A user logs into PVWA and requests access to a privileged account.
+   Authentication: The system authenticates the user using MFA and checks their role and permissions.
+   Credential Retrieval: The Digital Vault retrieves the encrypted credentials and decrypts them in a secure memory space.
+   Session Establishment: If the user initiates a session, PSM brokers the connection to the target system.
+   Audit Logging: The entire process is logged, and any actions taken during the session are recorded.
+   Monitoring: Real-time monitoring tools observe the session for any suspicious activity.
+These backend processes ensure that privileged access is tightly controlled, monitored, and secured, providing organizations with the means to protect their most sensitive assets.
+
 Security Layers of CyberArk ?
 =============================
    CyberArk employs several security layers to ensure the protection and integrity of privileged accounts and credentials:
