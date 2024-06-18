@@ -90,4 +90,50 @@ Example Workflow: Accessing a Credential :
    Comprehensive Monitoring: The access request and approval are logged and monitored.
    Tamper-Proof Auditability: The retrieval and usage of the credential are recorded in an immutable log.
    Hierarchical Encryption: The credential is decrypted using hierarchical keys before being presented to the user.
-This multi-layered security approach ensures that every step in the process is protected and monitored, providing robust security for privileged access managemen
+This multi-layered security approach ensures that every step in the process is protected and monitored, providing robust security for privileged access management.
+
+Ports used by CyberArk :
+========================
+   CyberArk uses several ports for different components and functionalities. Here are the key ports typically used by CyberArk components:
+   CyberArk Digital Vault (PVWA - Password Vault Web Access):
+   ----------------------------------------------------------
+     Port 443 (HTTPS): This port is used for secure web access to the Password Vault Web Access interface. It uses HTTPS to encrypt the communication between the client and the PVWA server.
+   CyberArk Central Policy Manager (CPM):
+   --------------------------------------
+     Port 18923 (Default): This port is used for communication between the CPM and the Digital Vault. It handles the automatic management and rotation of credentials.
+   CyberArk Privileged Session Manager (PSM):
+   ------------------------------------------
+     Port 3389 (RDP): Used for Remote Desktop Protocol (RDP) sessions managed by PSM.
+     Port 22 (SSH): Used for Secure Shell (SSH) sessions managed by PSM.
+     Port 443 (HTTPS): Used for secure web access to PSM, similar to PVWA.
+   CyberArk Application Identity Manager (AIM):
+   -------------------------------------------
+     Port 8200 (REST API): This port is used for communication between applications and AIM using the REST API.
+   CyberArk Vault (Central Credential Provider):
+   --------------------------------------------
+     Port 1858 (Default): Used for communication between various CyberArk components and the Vault server.
+   CyberArk Conjur (for DevOps secrets management):
+   -----------------------------------------------
+     Port 443 (HTTPS): Used for secure web access and API calls to Conjur.
+These ports are the default settings and can be customized during installation and configuration based on organizational policies and network architecture.
+
+Example Configuration:
+Here's a simplified example of how these ports are used in a CyberArk deployment:
+
+User Access to PVWA:
+
+User accesses PVWA via https://pvwa.example.com:443.
+CPM Managing Credentials:
+
+CPM communicates with the Digital Vault over port 18923 to rotate and update passwords.
+PSM Handling Sessions:
+
+PSM manages RDP sessions over port 3389 and SSH sessions over port 22.
+Admins access the PSM web interface over port 443.
+AIM Handling Application Credentials:
+
+Applications retrieve credentials from AIM over port 8200 using REST API calls.
+Vault Communications:
+
+Various CyberArk components communicate with the Vault over port 1858 to store and retrieve credentials.
+By configuring and securing these ports properly, CyberArk ensures secure and efficient management of privileged access and credentials within an organization.
