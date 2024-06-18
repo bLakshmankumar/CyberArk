@@ -1,0 +1,39 @@
+What is CyberArk ?
+==================
+   CyberArk is a cybersecurity company that provides solutions for managing privileged access, which is the access granted to accounts that have elevated permissions. 
+   These accounts are often targeted by attackers because they hold the keys to an organization's most sensitive information and critical systems. 
+   CyberArk's offerings are designed to protect these privileged accounts, credentials, and secrets.
+
+What is cyberark digital vault ?
+================================
+   The CyberArk Digital Vault is the core of CyberArk's Privileged Access Security (PAS) solution.
+   It is a secure, hardened environment where privileged credentials, session recordings, and other sensitive information are stored.
+   The Digital Vault uses multiple layers of security to protect this data, including encryption, access controls, and network isolation.
+
+Security Layers of CyberArk ?
+=============================
+   CyberArk employs several security layers to ensure the protection and integrity of privileged accounts and credentials:
+   Encryption:
+   -----------
+     Data-at-Rest Encryption: The data stored in the Digital Vault is encrypted using strong cryptographic algorithms.
+     Data-in-Transit Encryption: All data transmitted between the CyberArk components and the Digital Vault is encrypted to prevent interception and tampering.
+   Authentication:
+   ---------------
+     Multi-Factor Authentication (MFA): Users must provide multiple forms of verification before gaining access to the Digital Vault, enhancing security by requiring more than just a password.
+     Single Sign-On (SSO): Streamlines the authentication process while maintaining security through centralized identity providers.
+   Access Controls:
+   ----------------
+     Role-Based Access Control (RBAC): Access to resources within the Digital Vault is granted based on the user's role, ensuring that only authorized users can access sensitive information.
+     Granular Access Policies: Fine-tuned policies control who can access what data and perform which actions, based on user roles, time of day, and other factors.
+   Audit and Monitoring:
+   ---------------------
+     Session Recording: All privileged sessions can be recorded for audit purposes, providing a detailed record of user activities.
+     Audit Logs: Comprehensive logs of all actions performed within the Digital Vault are maintained, allowing for thorough review and forensic analysis.
+   Network Security:
+   -----------------
+     Network Segmentation: The Digital Vault is isolated from other network segments to reduce the attack surface and limit the potential for lateral movement by attackers.
+     Firewall and Intrusion Detection Systems (IDS): These systems are used to monitor and protect the network infrastructure surrounding the Digital Vault.
+   Disaster Recovery:
+  -----------------
+     High Availability and Redundancy: The Digital Vault can be configured for high availability with redundant systems to ensure continuous operation and quick recovery in case of failure.
+     Regular Backups: Data in the Digital Vault is regularly backed up to enable restoration in case of data loss or corruption.
